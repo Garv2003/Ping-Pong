@@ -45,6 +45,10 @@ document.addEventListener("mousemove", (e) => {
   playerPaddle.position = (e.y / window.innerHeight) * 100;
 });
 
+document.addEventListener("touchmove", (e) => {
+  playerPaddle.position = (e.touches[0].clientY / window.innerHeight) * 100;
+});
+
 // document.addEventListener("keydown",(e)=>{
 //     if(e.key===" "){
 window.requestAnimationFrame(update);
